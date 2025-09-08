@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Node.js Boss直聘自动投递工具</title>
+    <style>
+        body {
+            padding: 30px;
+            margin-bottom: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        * {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .img-responsive {
+            width: 60%;
+            height: auto;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 45px !important;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #7f8c8d;
+        }
+
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">🍀 Node.js Boss直聘自动投递工具</h1>
+
+<div align="center">
+    <a href="https://github.com/DadayaSuwen/node_get_jobs">
+        <img alt="Stars" src="https://img.shields.io/github/stars/DadayaSuwen/node_get_jobs?style=flat&label=Stars&labelColor=ff4f4f&color=ff8383">
+    </a>
+    <a href="https://github.com/DadayaSuwen/node_get_jobs/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/badge/License-MIT-34D058?labelColor=22863A&style=flat">
+    </a>
+</div>
+
+<div>
+    <h2>📖 项目简介</h2>
+    <p>基于Node.js和Puppeteer开发的Boss直聘自动投递工具，支持AI智能筛选和自动打招呼功能。</p>
+
+    <h2>🚀 功能特点</h2>
+    <ul>
+        <li>✅ 自动登录Boss直聘（扫码登录）</li>
+        <li>✅ 智能岗位搜索和筛选</li>
+        <li>✅ AI智能打招呼（DeepSeek集成）</li>
+        <li>✅ 配置文件驱动，易于定制</li>
+        <li>✅ 自动化Cookie管理</li>
+        <li>✅ 详细的投递日志记录</li>
+        <li>✅ 黑名单过滤系统</li>
+    </ul>
+
+    <h2>⚙️ 快速开始</h2>
+    
+    <h3>1. 克隆项目</h3>
+    <pre>
+git clone https://github.com/DadayaSuwen/node_get_jobs.git
+cd node_get_jobs
+    </pre>
+
+    <h3>2. 安装依赖</h3>
+    <pre>
+npm install
+    </pre>
+
+    <h3>3. 配置设置</h3>
+    <p>编辑 <code>config.json</code> 文件：</p>
+    <pre>
+{
+  "sayHi": "您的打招呼语",
+  "keywords": ["前端", "React", "TypeScript"],
+  "cityCode": ["101280100"],
+  "industry": ["100001"],
+  "experience": ["102"],
+  "enableAI": true,
+  "api": {
+    "baseUrl": "https://api.deepseek.com/chat/completions",
+    "apiKey": "your-api-key",
+    "model": "deepseek-chat"
+  }
+}
+    </pre>
+
+    <h3>4. 运行程序</h3>
+    <pre>
+npm start
+    </pre>
+
+    <h2>📁 配置文件说明</h2>
+    <ul>
+        <li><strong>config.json</strong> - 主配置文件（投递参数、AI设置）</li>
+        <li><strong>config_test.json</strong> - 测试环境配置</li>
+        <li><strong>data.json</strong> - 黑名单和过滤规则</li>
+        <li><strong>cookie.json</strong> - 自动生成的登录凭证</li>
+    </ul>
+
+    <h2>🖼️ 运行示例</h2>
+    <img alt="运行截图" class="img-responsive" src="./运行图片.png">
+
+    <h2>📞 联系方式</h2>
+    <ul>
+        <li>👤 维护者: DadayaSuwen</li>
+        <li>📧 GitHub: <a href="https://github.com/DadayaSuwen">https://github.com/DadayaSuwen</a></li>
+        <li>🐙 项目地址: <a href="https://github.com/DadayaSuwen/node_get_jobs">https://github.com/DadayaSuwen/node_get_jobs</a></li>
+    </ul>
+
+    <h2>📄 开源协议</h2>
+    <p>MIT License - 仅供学习和研究使用</p>
+</div>
+</body>
+</html>
