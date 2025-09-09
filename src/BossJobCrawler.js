@@ -351,10 +351,13 @@ class BossJobCrawler {
       
       // 1. 滚动到底部，加载所有岗位卡片
       let lastCount = -1;
-      while (true) {
+      let sameCountAttempts = 0;
+      const maxSameCountAttempts = 3;
+      
+      while (sameCountAttempts < maxSameCountAttempts) {
         // 滑动到底部
         await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight);');
-        await this.page.waitForTimeout(1000); // 等待加载
+        await this.page.waitForTimeout(1500); // 等待加载
         
         // 获取所有卡片数
         const cards = await this.page.$$('//ul[contains(@class, \'rec-job-list\')]//li[contains(@class, \'job-card-box\')]');
@@ -362,9 +365,18 @@ class BossJobCrawler {
         
         // 判断是否继续滑动
         if (currentCount === lastCount) {
-          break; // 没有新内容，跳出循环
+          sameCountAttempts++;
+          console.log(`滚动加载尝试 ${sameCountAttempts}/${maxSameCountAttempts}, 当前岗位数: ${currentCount}`);
+        } else {
+          sameCountAttempts = 0; // 重置计数器
         }
+        
         lastCount = currentCount;
+        
+        // 检查是否达到最大尝试次数
+        if (sameCountAttempts >= maxSameCountAttempts) {
+          break;
+        }
       }
       console.log(`【${keyword}】岗位已全部加载，总数:${lastCount}`);
       
@@ -376,16 +388,15 @@ class BossJobCrawler {
       const cards = await this.page.$$('//ul[contains(@class, \'rec-job-list\')]//li[contains(@class, \'job-card-box\')]');
       const count = cards.length;
       
+      const detailPage = await this.context.newPage();
+      await detailPage.goto(this.page.url());
+      await detailPage.waitForTimeout(1000);
+      
       for (let i = 0; i < count; i++) {
         try {
           const cards = await this.page.$$('//ul[contains(@class, \'rec-job-list\')]//li[contains(@class, \'job-card-box\')]');
           if (i >= cards.length) continue;
-          
-          // 在新页面中打开岗位详情
-          const detailPage = await this.context.newPage();
-          await detailPage.goto(this.page.url());
-          await detailPage.waitForTimeout(1000);
-          
+                    
           // 点击第i个岗位卡片
           const detailCards = await detailPage.$$('//ul[contains(@class, \'rec-job-list\')]//li[contains(@class, \'job-card-box\')]');
           if (i >= detailCards.length) {
@@ -398,7 +409,7 @@ class BossJobCrawler {
           
           // 等待详情内容加载
           try {
-            await detailPage.waitForSelector('div[class*="job-detail-box"]', { timeout: 4000 });
+            await detailPage.waitForSelector('div[class*="job-detail-box"]', { timeout: 8000 });
           } catch (error) {
             console.warn('岗位详情加载超时，跳过...');
             await detailPage.close();

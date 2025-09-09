@@ -55,7 +55,15 @@ class AiService {
       .replace('%s', sayHi);
 
     const result = await this.sendRequest(requestMessage);
-    return result.includes('false') ? { result: false } : { result: true, message: result };
+    
+    // 检查AI返回结果是否有效
+    if (!result || result.trim() === '' || result.includes('false') || result.length < 10) {
+      return { result: false, message: sayHi };
+    }
+    
+    // 清理AI返回的消息，移除可能的多余内容
+    const cleanMessage = result.replace(/["']/g, '').trim();
+    return { result: true, message: cleanMessage };
   }
 
   static cleanBossDesc(raw) {
