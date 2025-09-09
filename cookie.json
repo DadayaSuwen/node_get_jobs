@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "name": "__g",
+    "value": "-",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__l",
+    "value": "l=%2Fwww.zhipin.com%2Fweb%2Fuser%2F%3Fka%3Dheader-login&r=&g=&s=3&friend_source=0",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "wt2",
+    "value": "DIsCQZMIF0Vth42wPeaUcl-MuCyfmn-oQNEPzVyIhjCJVcAOHWrS8NvEhqaAaCEoGeffkue6PvdhClkO4zevYFQ~~",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1758394801.027645,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "wbg",
+    "value": "0",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1758394801.027816,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "zp_at",
+    "value": "BlqtcZaCcLqDjosUyVibWMuz0gpOsOilLjzIfEwMrms~",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1758394801.027869,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ab_guid",
+    "value": "f965bb65-db09-4fa2-a840-5d02b2eadea8",
+    "domain": "www.zhipin.com",
+    "path": "/",
+    "expires": 1791965297.770683,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "HMACCOUNT_BFESS",
+    "value": "8CC3A40EF2C4AD02",
+    "domain": ".hm.baidu.com",
+    "path": "/",
+    "expires": 1791965299.560316,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "Hm_lvt_194df3105ad7148dcf2b98a91b5e727a",
+    "value": "1757405300",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1788941299,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a",
+    "value": "1757405300",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "HMACCOUNT",
+    "value": "8CC3A40EF2C4AD02",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bst",
+    "value": "V2QNshFeT401hoVtRuyhUbIC-47DrWzSo~|QNshFeT401hoVtRuyhUbIC-47DrexSk~",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1758394801.61741,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__c",
+    "value": "1757405084",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__a",
+    "value": "75516491.1757405084..1757405084.3.1.3.3",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1791965300.786022,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "SERVERID",
+    "value": "cbc371873853573c2ef67afbf18dbd41|1757405300|1757405298",
+    "domain": "ws.zhipin.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__zp_stoken__",
+    "value": "e622fQknDqMOGwqfDgTwzGhQUERI9LT1JLH1FQjVESUlCSUJLS0JJSik9MsOWw4JNw53DvF7DjSZCL0lCPkJCP0JJRx9JRsWHwr1DSDnDu8OCVsOmw7xew40Rw73CvRojEcOHw4IaTMOCGnbDiS8ww77CvUY9RUYVw4rCvcOEDsOBw4bDhMKuw4rDhcK%2FPT02JixBDRgRa0E9VUxrD09hTWFlWxRUT1QvSUZIQnbDijhLFBQPFA8RERoRGhERGhAbfn7ChX7ChRMTGBMYOkLCnMK9xIPCq8aLw5vDr8SowpzCsMKNZsO5Y8SJwqzCmMOEwpDCvsOHdMKwdMKhw4pTelBMwrPDgGN5w4bCgmBpZMKKwrZ0w4Bxam5oVsKAGFkZDBcVDmRKFXh%2Bw4w%3D",
+    "domain": ".zhipin.com",
+    "path": "/",
+    "expires": 1757635701,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]
